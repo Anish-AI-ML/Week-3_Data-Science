@@ -1,0 +1,36 @@
+{
+  "source_file": "data.xlsx",
+  "source_rows": 32,
+  "duplicate_rows_removed": 1,
+  "missing_before": {
+    "Duration": 0,
+    "Date": 2,
+    "Pulse": 0,
+    "Maxpulse": 0,
+    "Calories": 2
+  },
+  "calories_median_imputation": 300.0,
+  "missing_date_rows_retained": 2,
+  "rows_after_cleaning": 31,
+  "valid_date_rows": 29,
+  "derived_columns": [
+    "Date_Missing_Flag",
+    "Calories_Per_Minute",
+    "Pulse_Category",
+    "Duration_Category"
+  ],
+  "flagged_unusual_values": [
+    {
+      "row_index": 7,
+      "issue": "Unusually high Duration (>120)",
+      "value": 450,
+      "action": "Flagged; original value retained"
+    },
+    {
+      "row_index": 23,
+      "issue": "Pulse exceeds Maxpulse",
+      "value": "130 > 101",
+      "action": "Flagged for review; original values retained"
+    }
+  ]
+}
